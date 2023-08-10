@@ -98,7 +98,7 @@
                                 </div>
                                 <div class="content-group">
                                     <div class="mt16">
-                                        <field name="discount_account" class="o_light_label" widget="radio"/>
+                                        <field name="discount_account" class="o_light_label" />
                                     </div>
                                 </div>
                             </div>

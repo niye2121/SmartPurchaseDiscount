@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="res_config_settings_view_form_purchase_discount" model="ir.ui.view">
+		<field name="name">res.config.settings.view.form.inherit.purchase.discount</field>
+		<field name="model">res.config.settings</field>
+		<field name="priority" eval="25" />
+		<field name="inherit_id" ref="purchase.res_config_settings_view_form_purchase" />
+		<field name="arch" type="xml">
+			<xpath expr="//div[@data-key='purchase']" position="inside">
+				<h2> Smart Discount Configuration </h2>
+				<div class="row mt16 o_settings_container" name="main_container">
+					<div class="col-12 col-lg-6 o_setting_box"
+						title="This activates a discount on a purchase order with varied possibilities based on the other smart discount options you've chosen.">
+						<div class="o_setting_left_pane">
+							<field name="activate_discount" />
+						</div>
+						<div class="o_setting_right_pane">
+							<label for="activate_discount" />
+							<div class="text-muted">
+								Activate discount for purchase order
+							</div>
+						</div>
+					</div>
+					<div class="row " name="discount_option"
+						attrs="{'invisible': [('activate_discount', '=', False)]}">
+						<div class="col-6 col-lg-6 o_setting_box">
+							<div class="o_setting_left_pane"/>
+							<div class="o_setting_right_pane">
+                                <label for="discount_method"/>
+                                <div class="text-muted">
+                                    The way you want to calculate purchase order
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="discount_method" class="o_light_label" widget="radio"/>
+                                    </div>
+                                </div>
+                            </div>
+
+							
+						</div>
+						<div class="col-6 col-lg-6 o_setting_box"
+							attrs="{'invisible': [('discount_method', '=', 'percentage')]}">
+
+							<div class="o_setting_left_pane"/>
+							<div class="o_setting_right_pane">
+                                <label for="fixed_discount_amount"/>
+                                <div class="text-muted">
+                                    Fixed discount amount for every purchase order
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="fixed_discount_amount" class="o_light_label" />
+                                    </div>
+                                </div>
+                            </div>
+							
+						</div>
+
+						<div class="col-6 col-lg-6 o_setting_box">
+							<div class="o_setting_left_pane"/>
+							<div class="o_setting_right_pane">
+                                <label for="apply_on"/>
+                                <div class="text-muted">
+									Where do you want to apply discount
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="apply_on" class="o_light_label" widget="radio"/>
+                                    </div>
+                                </div>
+                            </div>
+							
+						</div>
+						<div class="col-6 col-lg-6 o_setting_box">
+							<div class="o_setting_left_pane"/>
+							<div class="o_setting_right_pane">
+                                <label for="calculate"/>
+                                <div class="text-muted">
+									Calculate including or excludiing TAX
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="calculate" class="o_light_label" widget="radio"/>
+                                    </div>
+                                </div>
+                            </div>
+
+							
+						</div>
+						<div class="col-6 col-lg-6 o_setting_box">
+							<div class="o_setting_left_pane"/>
+							<div class="o_setting_right_pane">
+                                <label for="discount_account"/>
+                                <div class="text-muted">
+									If you want to handle discount amount in one account
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="discount_account" class="o_light_label" />
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+						
+					</div>
+				</div>
+			</xpath>
+		</field>
+	</record>
+
+</odoo>

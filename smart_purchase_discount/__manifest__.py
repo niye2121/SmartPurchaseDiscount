@@ -13,9 +13,9 @@
 
     'category': 'Purchase',
     'version': '0.1',
-    'depends': ['base'],
+    'depends': ['base','purchase','account'],
 
     'data': [
-        'views/views.xml',
+        'views/res_config_settings_views.xml',
     ],
 }

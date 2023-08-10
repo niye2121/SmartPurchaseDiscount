@@ -41,7 +41,7 @@
 							
 						</div>
 						<div class="col-6 col-lg-6 o_setting_box"
-							attrs="{'invisible': [('discount_method', '=', False)]}">
+							attrs="{'invisible': [('discount_method', '=', 'percentage')]}">
 
 							<div class="o_setting_left_pane"/>
 							<div class="o_setting_right_pane">
@@ -89,6 +89,22 @@
 
 							
 						</div>
+						<div class="col-6 col-lg-6 o_setting_box">
+							<div class="o_setting_left_pane"/>
+							<div class="o_setting_right_pane">
+                                <label for="discount_account"/>
+                                <div class="text-muted">
+									If you want to handle discount amount in one account
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="discount_account" class="o_light_label" widget="radio"/>
+                                    </div>
+                                </div>
+                            </div>
+							
+						</div>
+						
 					</div>
 				</div>
 			</xpath>

@@ -13,7 +13,7 @@
 
     'category': 'Purchase',
     'version': '0.1',
-    'depends': ['base','purchase'],
+    'depends': ['base','purchase','account'],
 
     'data': [
         'views/res_config_settings_views.xml',

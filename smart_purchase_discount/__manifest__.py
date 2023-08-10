@@ -16,6 +16,6 @@
     'depends': ['base'],
 
     'data': [
-        'views/views.xml',
+        'views/res_config_settings_views.xml',
     ],
 }
